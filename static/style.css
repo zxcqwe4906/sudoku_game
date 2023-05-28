@@ -40,3 +40,14 @@
     right: 3px;
     text-align: center;
 }
+
+.generate {
+    text-align: center;
+    border: 5px solid orange;
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+    margin-top: 20vh;
+    cursor: pointer;
+    font-size: 150%;
+}

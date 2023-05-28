@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>Sudoku</title>
     <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
   </head>
   <body>
@@ -24,7 +24,7 @@
                         {% set y = "" %}
                     {% endif %}
                     <div class="box" style="{{x + y}}">
-                        <div class="number" id="number-{{i}}{{j}}"></div>
+                        <div class="number" id="number-{{i}}{{j}}">{{board[i][j] if board}}</div>
 
                         <input class="input" id="input-{{i}}{{j}}" type="text" onchange=
                         "document.getElementById('number-{{i}}{{j}}').innerHTML=document.getElementById('input-{{i}}{{j}}').value">
@@ -32,7 +32,9 @@
                 {% endfor %}
             {% endfor %}
         </div>
-        <div class="btn-wrapper"></div>
+        <div class="btn-wrapper">
+            <div class="generate" onclick="window.location='/?generate=1'"> GENERATE </div>
+        </div>
     </div>
   </body>
 </html>
