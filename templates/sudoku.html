@@ -8,6 +8,31 @@
     <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
   </head>
   <body>
-    Hello
+    <div class="wrapper">
+        <div id="sudoku">
+            {% for i in range(9) %}
+                {% for j in range(9) %}
+                    {% if j in [2, 5]%}
+                        {% set x = "border-right: 7px solid green;" %}
+                    {% else %}
+                        {% set x = "" %}
+                    {% endif %}
+
+                    {% if i in [2, 5]%}
+                        {% set y = "border-bottom: 7px solid green;" %}
+                    {% else %}
+                        {% set y = "" %}
+                    {% endif %}
+                    <div class="box" style="{{x + y}}">
+                        <div class="number" id="number-{{i}}{{j}}"></div>
+
+                        <input class="input" id="input-{{i}}{{j}}" type="text" onchange=
+                        "document.getElementById('number-{{i}}{{j}}').innerHTML=document.getElementById('input-{{i}}{{j}}').value">
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="btn-wrapper"></div>
+    </div>
   </body>
 </html>

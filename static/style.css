@@ -1,0 +1,42 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#sudoku {
+    width: 750px;
+    height: 750px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin: auto;
+}
+
+.btn-wrapper {
+    width: 300px;
+    border: 3px solid blue;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border: 3px solid red;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.number {
+    font-size: 50px;
+    font-weight: 500;
+    color: blue;
+    margin-top: 3px;
+}
+
+.input {
+    width: 10px;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    text-align: center;
+}
