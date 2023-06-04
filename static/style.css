@@ -13,7 +13,6 @@
 
 .btn-wrapper {
     width: 300px;
-    border: 3px solid blue;
 }
 
 .box {
@@ -41,13 +40,24 @@
     text-align: center;
 }
 
-.generate, .solve {
+.generate {
     text-align: center;
     border: 5px solid orange;
     background-color: blueviolet;
     color: white;
     padding: 20px;
-    margin-top: 20vh;
+    margin-top: 25vh;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.solve, .reset {
+    text-align: center;
+    border: 5px solid orange;
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
     cursor: pointer;
     font-size: 150%;
 }
