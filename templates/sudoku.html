@@ -24,6 +24,7 @@
                         {% set y = "" %}
                     {% endif %}
                     <div class="box" style="{{x + y}}">
+                        <div class="hidden">.</div>
                         <div class="number" id="number-{{i}}{{j}}">{{board[i][j] if board}}</div>
 
                         <input class="input" id="input-{{i}}{{j}}" type="text" onchange=
@@ -34,6 +35,7 @@
         </div>
         <div class="btn-wrapper">
             <div class="generate" onclick="window.location='/?generate=1'"> GENERATE </div>
+            <div class="solve" onclick="window.location='/solve?board_str='+document.getElementById('sudoku').innerText"> SOLVE </div>
         </div>
     </div>
   </body>

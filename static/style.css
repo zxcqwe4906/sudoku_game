@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-.generate {
+.generate, .solve {
     text-align: center;
     border: 5px solid orange;
     background-color: blueviolet;
@@ -50,4 +50,9 @@
     margin-top: 20vh;
     cursor: pointer;
     font-size: 150%;
+}
+
+.hidden {
+    position: fixed;
+    color: white;
 }
